@@ -1,42 +1,58 @@
 import React from "react";
+import { FaEnvelope, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex w-[90%] justify-between px-[10%]">
-      <div className="w-[40%] text-xl flex flex-col leading-10">
-        <h1 className="text-5xl">Project Diary</h1>
-        <p>Cupidatat officia incididunt nostrud laboris.</p>
+    <footer className="bg-blue-900 text-white py-10 mx-[5%] rounded-md">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center">
+        <h1 className="text-4xl p-4">Project Diary</h1>
+        <ul className="flex space-x-4 mb-4">
+          <li>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-500"
+            >
+              <FaGithub size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-500"
+            >
+              <FaTwitter size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-500"
+            >
+              <FaInstagram size={24} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-500"
+            >
+              <FaEnvelope size={24} />
+            </a>
+          </li>
+        </ul>
+        <p className="text-sm">
+          &copy; 2023 Project Diary. All rights reserved.
+        </p>
       </div>
-      <div className="flex justify-evenly w-[40%] gap-10 ">
-        <div className="text-lg flex flex-col leading-10">
-          <p className="text-2xl font-semibold">Marketplace</p>
-          <ul>
-            <li>Home</li>
-            <li>Discover</li>
-            <li>Activity</li>
-            <li>Learn More</li>
-          </ul>
-        </div>
-        <div className="text-lg flex flex-col leading-10">
-          <p className="text-2xl font-semibold">Marketplace</p>
-          <ul>
-            <li>Home</li>
-            <li>Discover</li>
-            <li>Activity</li>
-            <li>Learn More</li>
-          </ul>
-        </div>
-        <div className="text-lg flex flex-col leading-10">
-          <p className="text-2xl font-semibold">Marketplace</p>
-          <ul>
-            <li>Home</li>
-            <li>Discover</li>
-            <li>Activity</li>
-            <li>Learn More</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 };
 

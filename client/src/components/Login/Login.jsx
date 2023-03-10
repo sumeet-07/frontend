@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import StuAuthenticationService from "../../services/StuAuthenticationService";
+import axios from "axios";
 
 const login = () => {
   const [userCred, setUserCred] = useState({
@@ -30,10 +31,24 @@ const login = () => {
       .then((resp) => {
         console.log("auth successful");
         StuAuthenticationService.storeUserDetails(userCred.userName, resp.data);
-        navigate("/StuDetails");
+        axios
+          .get(
+            `http://localhost:8080/student/profile/project?userName=${StuAuthenticationService.getUserName()}`
+          )
+          .then((data) => {
+            if (data.data) {
+              navigate("/StuProfile");
+            } else {
+              navigate("/StuDetails");
+            }
+          })
+          .catch((err) => {
+            navigate("/StuDetails");
+          });
       })
       .catch((err) => {
         console.log("failed auth", err);
+        alert("login failed");
         navigate("/Login");
       });
   };
@@ -76,9 +91,12 @@ const login = () => {
                 value={userCred.password}
               />
             </div>
-            <a href="#" className="text-xs text-purple-600 hover:underline">
+            <Link
+              to="/ForgetPass"
+              className="text-xs text-purple-600 hover:underline"
+            >
               Forget Password?
-            </a>
+            </Link>
             <div className="flex justify-center mt-6">
               <button
                 type="submit"

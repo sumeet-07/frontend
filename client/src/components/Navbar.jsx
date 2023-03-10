@@ -13,7 +13,7 @@ const Navbar = () => {
             Home
           </li>
           <li className="text-lg cursor-pointer text-black hover:text-blue-700">
-            <Link to="/StuDetails">About Us</Link>
+            <Link to="/">About Us</Link>
           </li>
           <li className="text-lg cursor-pointer text-black hover:text-blue-700">
             <Link to="/login">Login</Link>
