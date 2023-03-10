@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import pic1 from "../assets/pic1.jpg";
 import StuAuthenticationService from "../../services/StuAuthenticationService";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const StuDetails = () => {
+const UpdateDetails = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     prn: "",
-    batch: "SEPT_2021",
+    batch: "",
     submitDate: "",
     rollNo: "",
   });
@@ -26,13 +25,13 @@ const StuDetails = () => {
     e.preventDefault();
     console.log(formData);
     axios
-      .post(
-        `http://localhost:8080/student/${userName}/addPersonalDetails`,
+      .put(
+        `http://localhost:8080/student/updatePersonalDetails/${userName}`,
         formData
       )
       .then(() => {
         console.log("Details Sent");
-        navigate("/ProjDetails");
+        navigate("/UpdateProject");
       });
   };
 
@@ -154,4 +153,4 @@ const StuDetails = () => {
   );
 };
 
-export default StuDetails;
+export default UpdateDetails;

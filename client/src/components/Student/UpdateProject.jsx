@@ -23,8 +23,8 @@ const ProjDetails = () => {
     const reportForm = new FormData();
     reportForm.append("reportFile", reportRef.current.files[0]);
     try {
-      await axios.post(
-        `http://localhost:8080/student/${username}/addProjectDetails`,
+      await axios.put(
+        `http://localhost:8080/student/updateProjectDetails/${username}`,
         formdata
       );
       await axios.post(

@@ -12,15 +12,13 @@ const Home = () => {
           <p className="leading-snug">Project Management Made Easy</p>
         </div>
         <div className="text-xl">
-          <p>
-            Voluptate occaecat mollit duis adipisicing dolore ipsum ex officia
-            cillum et. Qui in aute consequat in exercitation elit ad laboris est
-            est laborum. Ipsum ullamco occaecat esse nulla. Non laboris
-            voluptate eu sunt sit nulla elit qui cillum. Esse tempor velit qui
-            voluptate eu reprehenderit nulla velit do. Enim nostrud irure
-            laboris officia minim do ea velit consectetur ut.Esse tempor velit
-            qui voluptate eu reprehenderit nulla velit do. Enim nostrud irure
-            laboris officia minim do ea velit consectetur ut.
+          <p className="leading-10">
+            The Purpose of this online portal is to provide a centralized
+            platform for students to submit their project data and personal
+            information and for Faculty to review and rate the projects.Most
+            important Purpose of this project is to easily provie a stable
+            platform to manage all the project which have been submitted to the
+            college or educational institute.
           </p>
         </div>
       </div>
