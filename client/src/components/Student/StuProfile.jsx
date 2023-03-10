@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import StuAuthenticationService from "../../services/StuAuthenticationService";
 import { Link } from "react-router-dom";
+import StuDashboard from "./StuDashboard";
 
 const stuProfile = () => {
   const [profileData, setProfileData] = useState({});
@@ -24,23 +25,7 @@ const stuProfile = () => {
   }, []);
   return (
     <>
-      <pre>{JSON.stringify(profileData, null, 2)}</pre>
-      <ul>
-        <li>{profileData.title}</li>
-        <li>{profileData.status}</li>
-
-        {/* <li>
-          {profileData === {}
-            ? ""
-            : profileData["studentProjectDetails"][0]["firstName"]}
-        </li> */}
-      </ul>
-      <div className=""></div>
-      <a href="http://localhost:8080/student/get_ppt/sumeet" target="_blank">
-        SRS
-      </a>
-      <br />
-      <Link to="/UpdateDetails">Update</Link>
+      <StuDashboard profileData={profileData} />
     </>
   );
 };

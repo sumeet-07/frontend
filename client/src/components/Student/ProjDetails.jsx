@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useRef, useState } from "react";
 import StuAuthenticationService from "../../services/StuAuthenticationService";
 import { useNavigate } from "react-router-dom";
+import StuDashboard from "./StuDashboard";
 
 const ProjDetails = () => {
   const [formdata, setFormData] = useState({

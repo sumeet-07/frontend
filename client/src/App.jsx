@@ -13,6 +13,8 @@ import UpdateDetails from "./components/Student/UpdateDetails";
 import UpdateProject from "./components/Student/UpdateProject";
 import ForgetPass from "./components/Login/ForgetPass";
 import SetPass from "./components/Login/SetPass";
+import AboutUs from "./components/AboutUs";
+import CompletedProj from "./components/Student/CompletedProj";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/StuProfile" element={<StuProfile />} />
           <Route path="/ForgetPass" element={<ForgetPass />} />
           <Route path="/SetPass" element={<SetPass />} />
+          <Route path="/CompletedProj" element={<CompletedProj />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

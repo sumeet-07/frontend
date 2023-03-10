@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginDrop from "./LoginDrop";
 
 const Navbar = () => {
   return (
@@ -13,10 +14,10 @@ const Navbar = () => {
             Home
           </li>
           <li className="text-lg cursor-pointer text-black hover:text-blue-700">
-            <Link to="/">About Us</Link>
+            <Link to="/AboutUs">About Us</Link>
           </li>
           <li className="text-lg cursor-pointer text-black hover:text-blue-700">
-            <Link to="/login">Login</Link>
+            <LoginDrop />
           </li>
           <li className="text-lg cursor-pointer text-black hover:text-blue-700">
             <Link to="/StuSignUp">Sign Up</Link>

@@ -1,15 +1,23 @@
 import React from "react";
-import { FaEnvelope, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaTwitter,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+  FaPhone,
+  FaMobile,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-900 text-white py-10 mx-[5%] rounded-md">
+    <footer className="bg-blue-900 text-white py-10 mx-[5%] rounded-md  w-[90%]">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center">
         <h1 className="text-4xl p-4">Project Diary</h1>
         <ul className="flex space-x-4 mb-4">
           <li>
             <a
-              href="https://facebook.com/"
+              href="https://github.com/Shyamk007/Project"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-500"
@@ -19,27 +27,27 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="https://twitter.com/"
+              href="http://www.linkedin.com/in/shyamkarhale"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-500"
             >
-              <FaTwitter size={24} />
+              <FaLinkedin size={24} />
             </a>
           </li>
           <li>
             <a
-              href="https://instagram.com/"
+              href="tel:+919765679425"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-500"
             >
-              <FaInstagram size={24} />
+              <FaMobile size={24} />
             </a>
           </li>
           <li>
             <a
-              href="https://instagram.com/"
+              href="mailto:teamprojectdiary@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-500"

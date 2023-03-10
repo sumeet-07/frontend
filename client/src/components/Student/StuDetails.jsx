@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import pic1 from "../assets/pic1.jpg";
 import StuAuthenticationService from "../../services/StuAuthenticationService";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
